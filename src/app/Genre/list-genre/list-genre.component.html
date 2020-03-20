@@ -1,0 +1,15 @@
+<h2>liste des genres</h2>
+<a href="#" [routerLink]="['add']">Ajouter un genre</a>
+<table class="table table-striped">
+    <tr>
+        <th>nom</th>
+        <th>actions</th>
+    </tr>
+    <tr *ngFor="let data of datas">
+        <td>{{ data.name }}</td>
+        <td><a href="#" [routerLink]="['edit', data.id]">modifier</a></td>
+        <td><a href="#" (click)="ondelete()">supprimer</a></td>
+    </tr>
+</table>
+
+<!-- <a [routerLink]="['detail', data.id]">{{ data.name }}</a> -->

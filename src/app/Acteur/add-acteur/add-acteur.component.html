@@ -1,0 +1,29 @@
+<h3>Ajouter un acteur</h3>
+
+<div class="container">
+    <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="text" [(ngModel)]="acteur.name" id="name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="firstname">Prénom</label>
+        <input type="text" [(ngModel)]="acteur.firstname" id="firstname" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="birth">Date de naissance</label>
+        <input type="text" placeholder="jj-mm-aaaa" [(ngModel)]="acteur.birth" id="birth" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="gender">Sexe</label>
+        <input type="text" placeholder="F ou M" [(ngModel)]="acteur.gender" id="gender" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="nationality">Nationalité</label>
+        <input type="text" [(ngModel)]="acteur.nationality" id="nationality" class="form-control">
+    </div>
+
+    <button class="btn btn-secondary" type="submit" (click)="onSave()">Ajouter</button>
+
+</div>
+
+<!-- {{ acteur | json }} -->

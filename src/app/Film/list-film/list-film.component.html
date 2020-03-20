@@ -1,0 +1,17 @@
+<h2>Liste des films</h2>
+<a href="#" [routerLink]="['add']">ajouter un film</a>
+<table class="table table-striped">
+    <tr>
+        <th>title</th>
+        <th>year</th>
+        <th>note</th>
+        <th>actions</th>
+    </tr>
+    <tr *ngFor="let data of datas">
+        <td>{{ data.title }}</td>
+        <td>{{ data.year }}</td>
+        <td>{{ data.note }}</td>
+        <td><a [routerLink]="['edit', data.id]">éditer</a></td>
+        <td><a href="#" (click)="ondelete()">supprimer</a></td>
+     </tr>   
+</table>

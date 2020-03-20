@@ -1,0 +1,35 @@
+<h3>Ajouter un film</h3>
+
+<div class="container">
+    <div class="form-group">
+        <label for="genre">Genre</label>
+        <select name="genre" id="genre" *ngFor="let data of datas">
+            <option value="{{ data.id }}">{{ data.name }}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="title">Titre</label>
+        <input type="text" [(ngModel)]="film.title" id="title" class="form-control">
+    </div>
+    <!-- <div class="form-group">
+        <label for="description">Description</label>
+        <textarea" [(ngModel)]="film.description" id="description" class="form-control"></textarea>
+    </div> -->
+    <div class="form-group">
+        <label for="year">Année</label>
+        <input type="number" [(ngModel)]="film.year" id="year" placeholder="année de sortie du film" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="note">Note</label>
+        <input type="number" min="0" max="10" [(ngModel)]="film.note" placeholder="note de 0 à 10" id="note" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="picture">Affiche du film</label>
+        <input type="file" [(ngModel)]="film.picture" id="picture" class="form-control">
+    </div>
+
+
+
+    <button class="btn btn-secondary" type="submit" (click)="onSave()">Ajouter</button>
+
+</div>
