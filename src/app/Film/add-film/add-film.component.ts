@@ -22,7 +22,15 @@ export class AddFilmComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    
+    this.getGenres();
+  }
+
+  getGenres(){
+    this.genreService.getGenres()
+      .subscribe(data=>{
+        this.datas = data;
+        // console.log(data)
+      })
   }
 
   onSave(){

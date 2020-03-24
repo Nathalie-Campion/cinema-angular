@@ -1,8 +1,56 @@
+<div class="grille">
+    <div class="colonne1 large25">
+        <div class="card">
+            <h4>Liste de films</h4>
+            <div class="ligne" *ngFor="let film of films">
+                <p>{{ film.title }}</p>
+                <p>{{ film.year }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="colonne2 large50">
+        <div class="card large49">
+            <div style="display: block">
+                <canvas baseChart
+                    [data]="doughnutChartData"
+                    [labels]="doughnutChartLabels"
+                    [chartType]="doughnutChartType"></canvas>
+            </div>
+            <h3>Répartition Femme Homme</h3>
+        </div>
 
-<div class="card large20">
-    <h4>Liste de films</h4>
-    <div class="ligne" *ngFor="let film of films">
-        <p>{{ film.title }}</p>
-        <p>{{ film.year }}</p>
+        <div class="card large49">
+            <h4>Actrices les plus vues</h4>
+            <div class="ligne" *ngFor="let actrice of actriceList">
+                <p>{{ actrice.firstname }} {{ actrice.name }}</p>
+                <p>{{ actrice.films.length }}</p>
+            </div>
+        </div>
+        <div class="card large100">
+            <h4>Productions de films suivant les années</h4>
+            <app-my-bar-chart></app-my-bar-chart>
+        </div>
+    </div>
+    <div class="colonne3 large25">
+        <div class="card">
+            <h4>Acteurs les plus vus</h4>
+            <div class="ligne" *ngFor="let acteur of acteurList">
+                <p>{{ acteur.firstname }} {{ acteur.name }}</p>
+                <p>{{ acteur.films.length }}</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h4>Classement des catégories</h4>
+            <div class="cat" *ngFor="let genre of genres">
+                <p class="cat-name">{{ genre.name }}</p>
+                <p class="cat-nb">{{ genre.films.length }}</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <p class="note">{{ somme }} / 10</p>
+            <h3>note moyenne</h3>
+        </div>
     </div>
 </div>

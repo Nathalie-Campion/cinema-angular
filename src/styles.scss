@@ -1,4 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+html {
+    font-size:62.5%;
+}
+
 h2, h3 {
     text-align: center;
+    margin-bottom: 10px;
+}
+
+.lien-add {
+    font-size: 1.2rem;
+}
+
+th {
+    background-color: lightgrey;
+}
+
+table {
+    margin-top: 10px;
 }

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import localeFrExtra from '@angular/common/locales/extra/fr';
+import { ChartsModule } from 'ng2-charts';
+import { MyBarChartComponent } from './dashboard/my-bar-chart/my-bar-chart.component';
+import { MyDoughnutChartComponent } from './dashboard/my-doughnut-chart/my-doughnut-chart.component';
 
 registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
 
@@ -39,11 +43,15 @@ registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
     EditGenreComponent,
     NavbarComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    MyBarChartComponent,
+    MyDoughnutChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
+    ChartsModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule

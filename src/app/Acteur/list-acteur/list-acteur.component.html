@@ -1,23 +1,25 @@
 <h2>Liste des acteurs</h2>
-<a href="#" [routerLink]="['add']">ajouter un acteur</a>
-<table class="table table-striped">
-    <tr>
-        <th>prénom</th>
-        <th>nom</th>
-        <th>date de naissance</th>
-        <th>sexe</th>
-        <th>nationalité</th>
-        <th>actions</th>
-    <tr *ngFor="let data of datas">
-
-        <td>{{ data.firstname }}</td>
-        <td>{{ data.name }}</td>
-        <td></td>
-        <td>{{ data.gender }}</td>
-        <td>{{ data.nationality }}</td>
-        <td><a [routerLink]="['edit', data.id]">modifier</a></td>
-        <td><a href="#" (click)="ondelete()">supprimer</a></td>      
-     </tr>  
-</table>
+<div class="container">
+    <a class="lien-add" href="#" [routerLink]="['add']">Ajouter un acteur</a>
+    <table class="table table-striped">
+        <tr>
+            <th>prénom</th>
+            <th>nom</th>
+            <th>date de naissance</th>
+            <th>sexe</th>
+            <th>nationalité</th>
+            <th>actions</th>
+            <th></th>
+        <tr *ngFor="let data of datas">
+            <td>{{ data.firstname }}</td>
+            <td>{{ data.name }}</td>
+            <td></td>
+            <td>{{ data.gender }}</td>
+            <td>{{ data.nationality }}</td>
+            <td><a [routerLink]="['edit', data.id]">modifier</a></td>
+            <td><a href="#" (click)="ondelete()">supprimer</a></td>
+        </tr>
+    </table>
+</div>
 
 <!-- {{ data.birth | date : 'dd-MM-yyyy' }} -->

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe } from '@angular/core';
 // import { Acteur } from 'src/app/models/acteur.models';
 import { ActeurService } from 'src/app/service/acteur.service';
 import { Router } from '@angular/router';

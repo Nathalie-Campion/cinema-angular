@@ -3,8 +3,8 @@
 <div class="container">
     <div class="form-group">
         <label for="genre">Genre</label>
-        <select name="genre" id="genre" *ngFor="let data of datas">
-            <option value="{{ data.id }}">{{ data.name }}</option>
+        <select name="genre" id="genre">
+            <option *ngFor="let data of datas" value="{{ data.id }}">{{ data.name }}</option>
         </select>
     </div>
     <div class="form-group">

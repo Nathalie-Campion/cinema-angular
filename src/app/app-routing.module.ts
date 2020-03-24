@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ActivatedRoute, Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './Home/home.component';
+import { HomeComponent } from './home/home.component';
 import { ListActeurComponent } from './Acteur/list-acteur/list-acteur.component';
 import { EditActeurComponent } from './Acteur/edit-acteur/edit-acteur.component';
 import { AddActeurComponent } from './Acteur/add-acteur/add-acteur.component';
@@ -10,7 +10,9 @@ import { AddFilmComponent } from './Film/add-film/add-film.component';
 import { ListGenreComponent } from './Genre/list-genre/list-genre.component';
 import { EditGenreComponent } from './Genre/edit-genre/edit-genre.component';
 import { AddGenreComponent } from './Genre/add-genre/add-genre.component';
-
+import { MyBarChartComponent } from './dashboard/my-bar-chart/my-bar-chart.component';
+import { MyDoughnutChartComponent } from './dashboard/my-doughnut-chart/my-doughnut-chart.component';
+ 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,7 +24,9 @@ const routes: Routes = [
   { path: 'film/edit', component: EditFilmComponent },
   { path: 'genre', component: ListGenreComponent },
   { path: 'genre/add', component: AddGenreComponent },
-  { path: 'genre/edit/:id', component: EditGenreComponent }  
+  { path: 'genre/edit/:id', component: EditGenreComponent },
+  { path: 'bar-chart', component: MyBarChartComponent },
+  { path: 'doughnut-chart', component: MyDoughnutChartComponent }  
 ];
 
 @NgModule({
